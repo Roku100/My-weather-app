@@ -1,5 +1,6 @@
 // API Configuration
-const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; // Get free key from openweathermap.org
+// For development: Add your API key directly below or use environment variable
+const API_KEY = process.env.VITE_WEATHER_API_KEY || 'YOUR_OPENWEATHERMAP_API_KEY';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEO_URL = 'https://api.openweathermap.org/geo/1.0';
 
