@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather App</h1>
+        </header>
+
+        <!-- Loading Component -->
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Search Form -->
+        <form id="searchForm" class="search-form">
+            <input
+                type="text"
+                id="locationInput"
+                placeholder="Enter city name..."
+                required
+            />
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <!-- Weather Display -->
+        <div id="weatherDisplay" class="weather-display hidden">
+            <div class="weather-header">
+                <h2 id="locationName"></h2>
+                <p id="currentDate"></p>
+            </div>
+
+            <div class="weather-main">
+                <div class="weather-icon-container">
+                    <img id="weatherIcon" src="" alt="Weather icon" />
+                </div>
+                <div class="weather-temp">
+                    <div class="temp-large" id="temperature"></div>
+                    <div class="weather-description" id="description"></div>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">Feels Like</span>
+                    <span class="detail-value" id="feelsLike"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span class="detail-value" id="humidity"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind Speed</span>
+                    <span class="detail-value" id="windSpeed"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pressure</span>
+                    <span class="detail-value" id="pressure"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Visibility</span>
+                    <span class="detail-value" id="visibility"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">UV Index</span>
+                    <span class="detail-value" id="uvIndex"></span>
+                </div>
+            </div>
+
+            <div class="weather-forecast">
+                <h3>5-Day Forecast</h3>
+                <div id="forecastContainer" class="forecast-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
