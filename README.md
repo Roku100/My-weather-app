@@ -27,12 +27,13 @@ A fully functional weather application that fetches real-time weather data and d
 Open `app.js` and replace `YOUR_OPENWEATHERMAP_API_KEY` with your actual API key:
 
 ```javascript
-const API_KEY = 'your_actual_api_key_here';
+const API_KEY = "your_actual_api_key_here";
 ```
 
 ### 3. Run the App
 
 Open `index.html` in your web browser by:
+
 - Double-clicking the file, or
 - Using a live server extension (recommended for better development experience)
 
@@ -53,23 +54,29 @@ Open `index.html` in your web browser by:
 ## API Functions
 
 ### `fetchCoordinates(location)`
+
 Converts a location name to latitude/longitude coordinates.
 
 ### `fetchCurrentWeather(lat, lon)`
+
 Fetches current weather data for given coordinates.
 
 ### `fetchForecast(lat, lon)`
+
 Fetches 5-day weather forecast.
 
 ### `processCurrentWeather(rawData, coords)`
+
 Processes API response and extracts only needed data.
 
 ### `processForecast(rawData)`
+
 Processes forecast data into daily summaries.
 
 ## Data Processed
 
 The app displays:
+
 - Location name and date
 - Current temperature (°C)
 - "Feels like" temperature
@@ -90,6 +97,7 @@ The app displays:
 ## Optional Enhancements
 
 The app includes a loading spinner that can be tested using:
+
 1. Open DevTools (F12)
 2. Go to Network tab
 3. Select "Slow 3G" or "Slow 4G" from the throttle dropdown
@@ -98,6 +106,7 @@ The app includes a loading spinner that can be tested using:
 ## API Data
 
 All data comes from the free OpenWeatherMap API. Each API call includes:
+
 - `console.log()` outputs for debugging (check DevTools console)
 - Proper error handling and user feedback
 - Only necessary data is processed and displayed
@@ -112,15 +121,18 @@ All data comes from the free OpenWeatherMap API. Each API call includes:
 ## Troubleshooting
 
 **"Location not found" error:**
+
 - Make sure you entered a valid city name
 - Try a different spelling or a larger city
 
 **No data showing:**
+
 - Check that your API key is correctly set in `app.js`
 - Open DevTools console to see detailed error messages
 - Check your internet connection
 
 **API errors:**
+
 - Verify your API key is active on openweathermap.org
 - Check if you've exceeded the free tier rate limits
 - Try again after a few moments

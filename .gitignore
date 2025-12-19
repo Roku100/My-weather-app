@@ -1,0 +1,28 @@
+# Environment variables
+.env
+.env.local
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Node modules (if using npm)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Distribution files
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
